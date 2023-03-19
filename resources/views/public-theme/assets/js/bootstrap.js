@@ -1,0 +1,1 @@
+require('../../templates/widgets/pages-top-menu/script');

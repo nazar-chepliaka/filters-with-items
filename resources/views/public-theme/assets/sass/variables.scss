@@ -1,0 +1,23 @@
+$large-size-min-width: 1063px;
+$medium-size-max-width: 1062px;
+$small-size-max-width: 768px;
+$tiny-size-max-width: 576px;
+
+$grid-columns:      12;
+$grid-gutter-width: 0px;
+
+$grid-breakpoints: (
+  	xs: 0,
+  	sm: $tiny-size-max-width,
+  	md: $small-size-max-width,
+  	lg: $medium-size-max-width,
+  	xl: 1200px
+);
+
+$container-max-widths: (
+	xs: 0,
+	sm: $tiny-size-max-width,
+  	md: $small-size-max-width,
+  	lg: $medium-size-max-width,
+  	xl: 1140px
+);

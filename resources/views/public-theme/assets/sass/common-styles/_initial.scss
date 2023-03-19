@@ -1,0 +1,214 @@
+@use "../variables";
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.font_arial {
+    font-family: Arial;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.has_error {
+    border: 1px solid #ff0000 !important;
+}
+
+.items_fill_height {
+    align-items: stretch;
+}
+
+.border_transparent {
+    border-color: transparent;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.relative {
+    position: relative;
+}
+
+.grid {
+    display: grid;
+}
+
+.undecorated_text {
+    text-decoration: none;
+}
+
+.block {
+    display: block;
+}
+
+.flex_start {
+    align-items: flex-start;
+}
+
+.init_font {
+    font-family: 'Rubik';
+}
+
+.float_right {
+    float: right;
+}
+
+.flex_end {
+    justify-content: flex-end;
+}
+
+.flex_col_end {
+    align-items: flex-end;
+}
+
+.float_left {
+    float: left;
+}
+
+.no_scroll {
+    overflow: hidden;
+}
+
+.overflow_hidden {
+    overflow: hidden;
+}
+
+.auto_scroll {
+    scroll-behavior: auto;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.pos_sticky {
+    position: sticky;
+}
+
+.undecorated_fieldset {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+.undecorated_ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.undecorated_btn {
+    background-color: transparent;
+    border: 0px;
+}
+
+.flex {
+    display: flex;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.grow_0 {
+    flex-grow: 0;
+}
+
+.basis_0 {
+    flex-basis: 0;
+}
+
+.shrink_0 {
+    flex-shrink: 0;
+}
+
+.valign_center {
+    align-items: center;
+}
+
+.row_reverse {
+    flex-direction: row-reverse;
+}
+
+.column_reverse {
+    flex-direction: column-reverse;
+}
+
+.space_between_items {
+    justify-content: space-between;
+}
+
+.align_center {
+    justify-content: center;
+}
+
+.flex_centered_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border_is_width {
+    box-sizing: border-box;
+}
+
+.max_width_full {
+    max-width: 100%;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.full_size {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.undecorated_legend {
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+}
+
+.appearance_none {
+    -webkit-appearance: none!important;
+    -moz-appearance: none!important;
+    appearance: none!important;
+}
+
+.no_focus_outline:focus,
+.no_focus_outline:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hide {
+    display: none;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.columned {
+    flex-direction: column;
+}
+
+.block_center {
+    margin-left: auto;
+    margin-right: auto;
+} 
