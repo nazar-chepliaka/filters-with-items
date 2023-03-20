@@ -23,6 +23,7 @@ class PostFormRequest extends FormRequest
     {
         return [
             'title' => ['required','string'],
+            'description' => ['required','string'],
             'text' => ['required','string'],
             'categories_ids' => ['nullable','array'],
             'categories_ids.*' => ['exists:categories,id'],
@@ -39,6 +40,8 @@ class PostFormRequest extends FormRequest
         return [
             'title.required' => 'Поле «Заголовок» є обов`язковим',
             'title.string' => 'Поле «Заголовок» має бути текстовим',
+            'description.required' => 'Поле «Опис» є обов`язковим',
+            'description.string' => 'Поле «Опис» має бути текстовим',
             'text.required' => 'Поле «Текст» є обов`язковим',
             'text.string' => 'Поле «Текст» має бути текстовим',
         ];

@@ -29,10 +29,12 @@
     <!-- Styles -->
     {{-- <link rel="stylesheet" href="{{ asset('admin/css/node_modules/app.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('admin/css/builded/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('editor/editormd.min.css') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('/assets/common/js/manifest.js') }}"></script>
     <script src="{{ asset('admin/js/builded/app.js') }}"></script>
+    
 
   @yield('head')
 

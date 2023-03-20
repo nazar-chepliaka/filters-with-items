@@ -51,8 +51,16 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Опис</label>
+                            <textarea class="form-control" name="description">{!! old('description',$post->description)!!}</textarea>
+                        </div>
+
+                        <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control" name="text">{!! old('description',$post->text)!!}</textarea>
+                            <div id="editor">
+                                <!-- Tips: Editor.md can auto append a `<textarea>` tag -->
+                                <textarea style="display:none;" name="text">{!! old('text',$post->text)!!}</textarea>
+                            </div>
                         </div>
  
                         <fieldset>
@@ -91,4 +99,143 @@
             $('#delete-image').submit();
         });
     </script>
+
+    <script type="text/javascript">
+    $(function() {
+        var editor = editormd("editor", {
+            // width: "100%",
+            height: 500,
+            tex              : true,
+            tocm             : true,
+            emoji            : true,
+            taskList         : true,
+            codeFold         : true,
+            searchReplace    : true,
+            htmlDecode       : "style,script,iframe",
+            flowChart        : true,
+            sequenceDiagram  : true,
+            path : "/editor/lib/",
+            lang: {
+            name : "en",
+            description : "Open source online Markdown editor.",
+            tocTitle    : "Table of Contents",
+            toolbar : {
+                undo             : "Undo(Ctrl+Z)",
+                redo             : "Redo(Ctrl+Y)",
+                bold             : "Bold",
+                del              : "Strikethrough",
+                italic           : "Italic",
+                quote            : "Block quote",
+                ucwords          : "Words first letter convert to uppercase",
+                uppercase        : "Selection text convert to uppercase",
+                lowercase        : "Selection text convert to lowercase",
+                h1               : "Heading 1",
+                h2               : "Heading 2",
+                h3               : "Heading 3",
+                h4               : "Heading 4",
+                h5               : "Heading 5",
+                h6               : "Heading 6",
+                "list-ul"        : "Unordered list",
+                "list-ol"        : "Ordered list",
+                hr               : "Horizontal rule",
+                link             : "Link",
+                "reference-link" : "Reference link",
+                image            : "Image",
+                code             : "Code inline",
+                "preformatted-text" : "Preformatted text / Code block (Tab indent)",
+                "code-block"     : "Code block (Multi-languages)",
+                table            : "Tables",
+                datetime         : "Datetime",
+                emoji            : "Emoji",
+                "html-entities"  : "HTML Entities",
+                pagebreak        : "Page break",
+                watch            : "Unwatch",
+                unwatch          : "Watch",
+                preview          : "HTML Preview (Press Shift + ESC exit)",
+                fullscreen       : "Fullscreen (Press ESC exit)",
+                clear            : "Clear",
+                search           : "Search",
+                help             : "Help",
+                info             : "About "
+            },
+            buttons : {
+                enter  : "Enter",
+                cancel : "Cancel",
+                close  : "Close"
+            },
+            dialog : {
+                link : {
+                    title    : "Link",
+                    url      : "Address",
+                    urlTitle : "Title",
+                    urlEmpty : "Error: Please fill in the link address."
+                },
+                referenceLink : {
+                    title    : "Reference link",
+                    name     : "Name",
+                    url      : "Address",
+                    urlId    : "ID",
+                    urlTitle : "Title",
+                    nameEmpty: "Error: Reference name can't be empty.",
+                    idEmpty  : "Error: Please fill in reference link id.",
+                    urlEmpty : "Error: Please fill in reference link url address."
+                },
+                image : {
+                    title    : "Image",
+                    url      : "Address",
+                    link     : "Link",
+                    alt      : "Title",
+                    uploadButton     : "Upload",
+                    imageURLEmpty    : "Error: picture url address can't be empty.",
+                    uploadFileEmpty  : "Error: upload pictures cannot be empty!",
+                    formatNotAllowed : "Error: only allows to upload pictures file, upload allowed image file format:"
+                },
+                preformattedText : {
+                    title             : "Preformatted text / Codes", 
+                    emptyAlert        : "Error: Please fill in the Preformatted text or content of the codes."
+                },
+                codeBlock : {
+                    title             : "Code block",         
+                    selectLabel       : "Languages: ",
+                    selectDefaultText : "select a code language...",
+                    otherLanguage     : "Other languages",
+                    unselectedLanguageAlert : "Error: Please select the code language.",
+                    codeEmptyAlert    : "Error: Please fill in the code content."
+                },
+                htmlEntities : {
+                    title : "HTML Entities"
+                },
+                help : {
+                    title : "Help"
+                }
+            }
+        }
+        });
+/*
+        var testView = editormd.markdownToHTML("editor", {
+            tex              : true,
+            tocm             : true,
+            emoji            : true,
+            taskList         : true,
+            codeFold         : true,
+            searchReplace    : true,
+            htmlDecode       : "style,script,iframe",
+            flowChart        : true,
+            sequenceDiagram  : true,
+            path : "/editor/lib/",
+        });
+
+        console.log(testView);*/
+    });
+</script>
+
+    <script src="{{ asset('editor/editormd.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/codemirror/codemirror.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/flowchart.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/jquery.flowchart.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/raphael.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/underscore.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/marked.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/prettify.min.js') }}"></script>
+    <script src="{{ asset('editor/lib/sequence-diagram.min.js') }}"></script>
 @endsection

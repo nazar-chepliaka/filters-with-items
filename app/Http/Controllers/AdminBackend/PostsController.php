@@ -112,6 +112,7 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $this->deleteFile($post->image_path);
+        $post->categories()->sync([]);
 
         $post->delete();
 

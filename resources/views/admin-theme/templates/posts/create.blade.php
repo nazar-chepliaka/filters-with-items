@@ -40,6 +40,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label>Опис</label>
+                            <textarea class="form-control" name="description">{!! old('description') !!}</textarea>
+                        </div>
+
+                        <div class="form-group">
                             <label>Текст</label>
                             <textarea class="form-control" name="text">{!! old('text') !!}</textarea>
                         </div>
