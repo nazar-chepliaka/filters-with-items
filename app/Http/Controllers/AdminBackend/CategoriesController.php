@@ -112,6 +112,9 @@ class CategoriesController extends Controller
         $category = Category::find($id);
         $this->deleteFile($category->image_path);
 
+        $category->image_path = null;
+        $category->save();
+
         return redirect()->route('admin.categories.edit', $id)->with('success', 'Зображення успішно видалено');
     }
 }

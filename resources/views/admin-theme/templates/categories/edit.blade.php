@@ -62,6 +62,7 @@
 
                     <form action="{{ route('admin.categories.image.destroy',$category->id)}}" method="POST" onsubmit="return confirm('Удалить?') ? true : false;" id="delete-image">
                         {!! csrf_field() !!}
+                        {{ method_field('DELETE') }}
                         <input type="hidden" name="image" value="" id="image-field">
                     </form>
                 </div>
