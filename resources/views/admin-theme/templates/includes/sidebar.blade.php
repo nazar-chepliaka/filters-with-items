@@ -15,7 +15,23 @@
     ">
         <i class="nav-icon fas fa-home"></i>
         <p>
-          Основная
+          Панель керування
+        </p>
+      </a>
+    </li>
+
+
+    <li class="nav-item">
+      <a href="{{route('admin.categories.index')}}" class="nav-link
+      @if(
+        request()->routeIs('admin.categories.*')
+      )
+        active
+      @endif
+    ">
+        <i class="nav-icon fas fa-images"></i>
+        <p>
+          Категорії
         </p>
       </a>
     </li>

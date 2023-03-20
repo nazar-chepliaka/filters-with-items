@@ -12,6 +12,12 @@
 
     <div data-group="page_content" data-role="wrapper" class="content_wrapper">
         <h1>Каталог</h1>
+
+        <div class="row">
+            <div data-group="categories_list" data-role="item" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 border_is_width">
+                Налаштування середовища
+            </div>
+        </div>
     </div>
 
 </body>

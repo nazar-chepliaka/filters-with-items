@@ -9,6 +9,9 @@
 
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <!-- Theme style -->
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
@@ -53,10 +56,10 @@
   <div class="content-wrapper">
 
     <header class="bg-white shadow" style="z-index: 999;position: relative;">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" >
+        <div class="mx-auto px-4 sm:px-6 lg:px-8" >
             <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto">
+    <div class="mx-auto">
         <div class="flex justify-between h-16">
             <div class="flex">
             </div>

@@ -29,6 +29,9 @@ Route::group(['namespace' => 'App\Http\Controllers\PublicBackend'], function () 
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');*/
 
     Route::get('/', 'DashboardController@index')->name('dashboard');
+
+    Route::resource('categories', 'CategoriesController');
+    Route::delete('/categories/{id}/image', 'CategoriesController@destroyImage')->name('categories.image.destroy');
 });
 
 require __DIR__.'/auth.php';
