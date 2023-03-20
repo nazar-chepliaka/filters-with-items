@@ -18582,10 +18582,49 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./resources/views/admin-theme/assets/css/app.css":
+/*!********************************************************!*\
+  !*** ./resources/views/admin-theme/assets/css/app.css ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/views/public-theme/templates/pages/homepage/_style.scss":
 /*!***************************************************************************!*\
   !*** ./resources/views/public-theme/templates/pages/homepage/_style.scss ***!
   \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/views/public-theme/templates/pages/category/_style.scss":
+/*!***************************************************************************!*\
+  !*** ./resources/views/public-theme/templates/pages/category/_style.scss ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/views/public-theme/templates/pages/post/_style.scss":
+/*!***********************************************************************!*\
+  !*** ./resources/views/public-theme/templates/pages/post/_style.scss ***!
+  \***********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -18612,19 +18651,6 @@ __webpack_require__.r(__webpack_exports__);
 /*!************************************************************!*\
   !*** ./resources/views/public-theme/assets/sass/_app.scss ***!
   \************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/views/admin-theme/assets/css/app.css":
-/*!********************************************************!*\
-  !*** ./resources/views/admin-theme/assets/css/app.css ***!
-  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21388,10 +21414,12 @@ Popper.Defaults = Defaults;
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/admin/js/builded/app": 0,
-/******/ 			"admin/css/node_modules/app": 0,
 /******/ 			"assets/common/css/_app": 0,
 /******/ 			"admin/css/builded/styles": 0,
-/******/ 			"assets/pages/homepage/_style": 0
+/******/ 			"assets/pages/post/_style": 0,
+/******/ 			"assets/pages/category/_style": 0,
+/******/ 			"assets/pages/homepage/_style": 0,
+/******/ 			"admin/css/node_modules/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -21441,11 +21469,13 @@ Popper.Defaults = Defaults;
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["admin/css/node_modules/app","assets/common/css/_app","admin/css/builded/styles","assets/pages/homepage/_style"], () => (__webpack_require__("./resources/views/admin-theme/assets/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["admin/css/node_modules/app","assets/common/css/_app","admin/css/builded/styles","assets/pages/homepage/_style"], () => (__webpack_require__("./resources/views/public-theme/templates/pages/homepage/_style.scss")))
-/******/ 	__webpack_require__.O(undefined, ["admin/css/node_modules/app","assets/common/css/_app","admin/css/builded/styles","assets/pages/homepage/_style"], () => (__webpack_require__("./resources/views/admin-theme/assets/sass/styles.scss")))
-/******/ 	__webpack_require__.O(undefined, ["admin/css/node_modules/app","assets/common/css/_app","admin/css/builded/styles","assets/pages/homepage/_style"], () => (__webpack_require__("./resources/views/public-theme/assets/sass/_app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["admin/css/node_modules/app","assets/common/css/_app","admin/css/builded/styles","assets/pages/homepage/_style"], () => (__webpack_require__("./resources/views/admin-theme/assets/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/admin-theme/assets/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/public-theme/templates/pages/homepage/_style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/public-theme/templates/pages/category/_style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/public-theme/templates/pages/post/_style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/admin-theme/assets/sass/styles.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/public-theme/assets/sass/_app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/common/css/_app","admin/css/builded/styles","assets/pages/post/_style","assets/pages/category/_style","assets/pages/homepage/_style","admin/css/node_modules/app"], () => (__webpack_require__("./resources/views/admin-theme/assets/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers\PublicBackend'], function () {
     Route::get('/', 'HomepageController@index')->name('homepage');
+    Route::get('/categories/{id}', 'CategoriesController@show')->name('categories.show');
+    Route::get('/posts/{id}', 'PostsController@show')->name('posts.show');
 });
 
 /*Route::get('/dashboard', function () {
@@ -23,7 +25,7 @@ Route::group(['namespace' => 'App\Http\Controllers\PublicBackend'], function () 
 })->middleware(['auth', 'verified'])->name('dashboard');
 */
 
- Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin-panel')->namespace('App\Http\Controllers\AdminBackend')->group(function () {
+Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin-panel')->namespace('App\Http\Controllers\AdminBackend')->group(function () {
     /*Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');*/

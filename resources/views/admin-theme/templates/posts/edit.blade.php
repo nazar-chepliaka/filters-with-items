@@ -211,21 +211,6 @@
             }
         }
         });
-/*
-        var testView = editormd.markdownToHTML("editor", {
-            tex              : true,
-            tocm             : true,
-            emoji            : true,
-            taskList         : true,
-            codeFold         : true,
-            searchReplace    : true,
-            htmlDecode       : "style,script,iframe",
-            flowChart        : true,
-            sequenceDiagram  : true,
-            path : "/editor/lib/",
-        });
-
-        console.log(testView);*/
     });
 </script>
 

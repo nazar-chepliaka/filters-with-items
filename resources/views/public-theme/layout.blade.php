@@ -17,6 +17,8 @@
         <script src="{{ asset('/assets/common/js/app.js') }}"></script>
 
         @yield('homepage-page-head-part')
+        @yield('category-page-head-part')
+        @yield('post-page-head-part')
     </head>
     @yield('body')
 </html>

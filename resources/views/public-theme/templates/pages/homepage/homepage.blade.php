@@ -1,6 +1,6 @@
 @extends('public-theme.layout')
 @section('meta')
-    <title>Головна</title>
+    <title>Каталог</title>
 @endsection
 @section('homepage-page-head-part')
     <link href="{{ asset('/assets/pages/homepage/_style.css') }}" rel="stylesheet">
@@ -16,8 +16,7 @@
         <div class="row">
             @foreach($categories as $category)
                 <div data-group="categories_list" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <a href="#" data-role="item" class="border_is_width text_center">
-                        
+                    <a href="{{route('categories.show',$category->id)}}" data-role="item" class="border_is_width text_center">
                         <div data-role="item_image" class="text_center">
                             @if(!empty($category->image_path))
                                 <img src="{{$category->image_path}}">

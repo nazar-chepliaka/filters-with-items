@@ -32,13 +32,17 @@ mix
   .sass('resources/views/public-theme/templates/pages/homepage/_style.scss', 'public/assets/pages/homepage')
 ;
 
-/* catalog page 
+/* category page */
 mix
-  .sass('resources/views/public-theme/templates/pages/catalog/_style.scss', 'public/assets/pages/catalog')
-  .js('resources/views/public-theme/templates/pages/catalog/script.js', 'public/assets/pages/catalog')
+  .sass('resources/views/public-theme/templates/pages/category/_style.scss', 'public/assets/pages/category')
 ;
 
- search page 
+/* post page */
+mix
+  .sass('resources/views/public-theme/templates/pages/post/_style.scss', 'public/assets/pages/post')
+;
+
+/* search page 
 mix
   .sass('resources/views/public-theme/templates/pages/search/_style.scss', 'public/assets/pages/search')
   .js('resources/views/public-theme/templates/pages/search/script.js', 'public/assets/pages/search')

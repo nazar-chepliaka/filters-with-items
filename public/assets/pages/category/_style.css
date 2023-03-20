@@ -1867,24 +1867,17 @@ h1 {
   background-color: transparent !important;
 }
 
-[data-group=categories_list] [data-role=item] {
+[data-group=posts_list] [data-role=item] {
   padding: 28px;
   background: #d8d9dc;
   border-right: 4px solid #a0a0a0;
-  display: block;
-  color: #000000;
-  margin: 0px 18px;
 }
 
-[data-group=categories_list] [data-role=item]:hover {
-  text-decoration: none;
+[data-group=posts_list] [data-role=item_image] {
+  min-width: 40px;
+  margin-right: 28px;
 }
 
-[data-group=categories_list] [data-role=item_image] {
-  padding: 28px;
-}
-
-[data-group=categories_list] [data-role=item_image] img {
-  width: 100%;
-  max-width: 90px;
+[data-group=posts_list] [data-role=item] a {
+  color: #000;
 }
