@@ -4,12 +4,17 @@ namespace App\Http\Controllers\AdminBackend;
 
 use Illuminate\Http\Request;
 
+use Str;
+
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryFormRequest;
 use App\Models\Category;
 
 class CategoriesController extends Controller
 {
+
+    protected $uploads_path = '/uploads/category/';
+
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +40,17 @@ class CategoriesController extends Controller
      */
     public function store(CategoryFormRequest $request)
     {
-        $category = Category::create($request->only(Category::getTableColumnsNames()));
+        $image = ['image_path' => null];
+
+        if (request()->hasFile('image')) {
+            $file = request()->file('image');
+            $filename = time() . Str::slug($file->getClientOriginalName(), '-');
+            $file->move(public_path() . $this->uploads_path, $filename);
+
+            $image['image_path'] = $this->uploads_path . $filename;
+        }
+
+        $category = Category::create(array_merge($image, $request->only(Category::getTableColumnsNames())));
 
         return redirect()->route('admin.categories.index')->with('success', 'Запис успішно збережено');
     }
