@@ -39,7 +39,7 @@
 
                         <div class="collapse mb-3" id="image">
                             <div class="card card-body">
-                                <div class="col-6"><img src="{{$category->image_path}}" alt=""></div>
+                                <div class="col-6"><img src="{{$category->image_path}}"></div>
                             </div>
                         </div>
 

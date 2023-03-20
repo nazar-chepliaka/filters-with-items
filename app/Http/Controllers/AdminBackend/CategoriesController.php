@@ -9,9 +9,11 @@ use Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryFormRequest;
 use App\Models\Category;
+use App\Traits\deleteFile;
 
 class CategoriesController extends Controller
 {
+    use deleteFile;
 
     protected $uploads_path = '/uploads/category/';
 
@@ -44,7 +46,7 @@ class CategoriesController extends Controller
 
         if (request()->hasFile('image')) {
             $file = request()->file('image');
-            $filename = time() . Str::slug($file->getClientOriginalName(), '-');
+            $filename = time() . Str::slug($file->getClientOriginalName(), '-') . '.' . $file->getClientOriginalExtension();
             $file->move(public_path() . $this->uploads_path, $filename);
 
             $image['image_path'] = $this->uploads_path . $filename;
@@ -72,9 +74,34 @@ class CategoriesController extends Controller
     {
         $category = Category::find($id);
 
-        $category->update($request->only(array_keys($category->getAttributes())));
+        $image = ['image_path' => $category->image_path];
+
+        if (request()->hasFile('image')) {
+            $this->deleteFile($category->image_path);
+
+            $file = request()->file('image');
+            $filename = time() . Str::slug($file->getClientOriginalName(), '-') . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path() . $this->uploads_path, $filename);
+
+            $image['image_path'] = $this->uploads_path . $filename;
+        }
+
+        $category->update(array_merge($image, $request->only(array_keys($category->getAttributes()))));
 
         return redirect()->route('admin.categories.edit', $id)->with('success', 'Запис успішно збережено');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $category = Category::find($id);
+        $this->deleteFile($category->image_path);
+
+        $category->delete();
+
+        return redirect()->route('admin.categories.index')->with('success', 'Запис успішно вилучено');
     }
 
     /**
@@ -82,6 +109,9 @@ class CategoriesController extends Controller
      */
     public function destroyImage(Request $request, string $id)
     {
+        $category = Category::find($id);
+        $this->deleteFile($category->image_path);
+
         return redirect()->route('admin.categories.edit', $id)->with('success', 'Зображення успішно видалено');
     }
 }

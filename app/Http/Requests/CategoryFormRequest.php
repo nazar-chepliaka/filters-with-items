@@ -34,8 +34,8 @@ class CategoryFormRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required' => 'Поле заголовок є обов`язковим',
-            'title.string' => 'Поле заголовок має бути текстовим',
+            'title.required' => 'Поле «Назва» є обов`язковим',
+            'title.string' => 'Поле «Назва» має бути текстовим',
         ];
     }
 }
