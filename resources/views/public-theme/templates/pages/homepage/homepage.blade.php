@@ -15,7 +15,7 @@
 
         <div class="row">
             @foreach($categories as $category)
-                <div data-group="categories_list" class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                <div data-group="categories_list" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <a href="#" data-role="item" class="border_is_width text_center">
                         
                         <div data-role="item_image" class="text_center">
@@ -25,7 +25,7 @@
                                 <img src="/assets/common/images/folder-information-outline.svg">
                             @endif
                         </div>
-                        Налаштування середовища
+                        {{$category->title}}
                     </a>
                 </div>
             @endforeach

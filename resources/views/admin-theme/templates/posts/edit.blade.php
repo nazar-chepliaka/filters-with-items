@@ -8,25 +8,25 @@
                 <div class="card-header stincky">
                     <div class="d-flex justify-content-between">
                         <div>
-                            Редагування категорії
+                            Редагування посту
                         </div>
                         <div class="d-flex">
-                            <a href="{{route('admin.categories.index')}}" class="btn btn-block btn-outline-dark" title="Повернутись до списку категорій"><i class="fas fa-undo"></i></a>
+                            <a href="{{route('admin.posts.index')}}" class="btn btn-block btn-outline-dark" title="Повернутись до списку категорій"><i class="fas fa-undo"></i></a>
                         </div>
                     </div> 
                 </div>
 
                 <div class="card-body">
-                    <form action="{{route('admin.categories.update',$category)}}" method="POST" enctype="multipart/form-data" id="category">
+                    <form action="{{route('admin.posts.update',$post)}}" method="POST" enctype="multipart/form-data" id="post">
                         {!! csrf_field() !!}
                         {{ method_field('PUT') }}
 
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text">Зображення категорії</span>
+                            <span class="input-group-text">Зображення посту</span>
                           </div>
                           <div class="input-group-append">
-                                @if(!empty($category->image_path))
+                                @if(!empty($post->image_path))
                                     <div class="btn btn-outline-secondary" data-toggle="collapse" data-target="#image" aria-expanded="false" aria-controls="image">Переглянути</div>
                                     <button class="btn  btn-outline-secondary btn-delete button-delete-image" title="Удалить" data-field="image">Видалити</button>
                                 @endif
@@ -39,20 +39,20 @@
 
                         <div class="collapse mb-3" id="image">
                             <div class="card card-body">
-                                <div class="col-6"><img src="{{$category->image_path}}"></div>
+                                <div class="col-6"><img src="{{$post->image_path}}"></div>
                             </div>
                         </div>
 
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text">Назва</span>
+                            <span class="input-group-text">Заголовок</span>
                           </div>
-                          <input type="text" class="form-control" name="title" value="{!! old('title',$category->title) !!}">
+                          <input type="text" class="form-control" name="title" value="{!! old('title',$post->title) !!}">
                         </div>
 
                         <div class="form-group">
-                            <label>Описание</label>
-                            <textarea class="form-control" name="description">{!! old('description',$category->description)!!}</textarea>
+                            <label>Текст</label>
+                            <textarea class="form-control" name="description">{!! old('description',$post->text)!!}</textarea>
                         </div>
 
                         <div class="text-right">
@@ -60,7 +60,7 @@
                         </div>
                     </form>
 
-                    <form action="{{ route('admin.categories.image.destroy',$category->id)}}" method="POST" onsubmit="return confirm('Видалити?') ? true : false;" id="delete-image">
+                    <form action="{{ route('admin.posts.image.destroy',$post->id)}}" method="POST" onsubmit="return confirm('Видалити?') ? true : false;" id="delete-image">
                         {!! csrf_field() !!}
                         {{ method_field('DELETE') }}
                         <input type="hidden" name="image" value="" id="image-field">

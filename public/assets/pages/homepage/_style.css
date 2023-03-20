@@ -1868,7 +1868,7 @@ h1 {
   border-right: 4px solid #a0a0a0;
   display: block;
   color: #000000;
-  font-weight: 600;
+  margin: 0px 18px;
 }
 
 [data-group=categories_list] [data-role=item]:hover {
@@ -1881,5 +1881,5 @@ h1 {
 
 [data-group=categories_list] [data-role=item_image] img {
   width: 100%;
-  max-width: 120px;
+  max-width: 90px;
 }

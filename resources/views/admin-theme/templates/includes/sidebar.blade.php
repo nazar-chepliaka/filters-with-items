@@ -36,6 +36,22 @@
       </a>
     </li>
 
+
+    <li class="nav-item">
+      <a href="{{route('admin.posts.index')}}" class="nav-link
+      @if(
+        request()->routeIs('admin.posts.*')
+      )
+        active
+      @endif
+    ">
+        <i class="nav-icon fas fa-images"></i>
+        <p>
+          Пости
+        </p>
+      </a>
+    </li>
+
   </ul>
 </nav>
 <!-- /.sidebar-menu -->

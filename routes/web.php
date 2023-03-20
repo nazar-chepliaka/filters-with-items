@@ -32,6 +32,9 @@ Route::group(['namespace' => 'App\Http\Controllers\PublicBackend'], function () 
 
     Route::resource('categories', 'CategoriesController');
     Route::delete('/categories/{id}/image', 'CategoriesController@destroyImage')->name('categories.image.destroy');
+
+    Route::resource('posts', 'PostsController');
+    Route::delete('/posts/{id}/image', 'PostsController@destroyImage')->name('posts.image.destroy');
 });
 
 require __DIR__.'/auth.php';
