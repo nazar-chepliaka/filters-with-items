@@ -12,4 +12,9 @@ class Category extends Model
     use HasFactory, getTableColumnsNames;
 
     protected $guarded = [];
+
+    public function posts()
+    {
+        return $this->belongsToMany('App\Models\Post')->withPivot(['id']);
+    }
 }

@@ -22,6 +22,7 @@
                             <tr>
                                 <th scope="col" style="width: 73px;"><h5>#</h5></th>
                                 <th scope="col"><h5>Назва</h5></th>
+                                <th scope="col"><h5>Категорії</h5></th>
                                 <th scope="col"><h5>Зображення</h5></th>
                                 <th scope="col" style="width: 73px;"></th>
                                 <th scope="col" style="width: 73px;"></th>
@@ -32,6 +33,16 @@
                             <tr>
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$post->title}}</td>
+
+                                <td>
+                                    @forelse ($post->categories as $category)
+                                        <div>
+                                            {{$category->title}}
+                                        </div>
+                                    @empty
+                                        -
+                                    @endforelse
+                                </td>
 
                                 <td>
                                     @if($post->image_path) 

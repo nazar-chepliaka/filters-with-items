@@ -24,6 +24,8 @@ class PostFormRequest extends FormRequest
         return [
             'title' => ['required','string'],
             'text' => ['required','string'],
+            'categories_ids' => ['nullable','array'],
+            'categories_ids.*' => ['exists:categories,id'],
         ];
     }
 

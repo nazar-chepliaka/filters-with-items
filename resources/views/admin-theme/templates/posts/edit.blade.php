@@ -52,8 +52,17 @@
 
                         <div class="form-group">
                             <label>Текст</label>
-                            <textarea class="form-control" name="description">{!! old('description',$post->text)!!}</textarea>
+                            <textarea class="form-control" name="text">{!! old('description',$post->text)!!}</textarea>
                         </div>
+ 
+                        <fieldset>
+                            <legend>Категорії</legend>
+
+                            @foreach($categories as $category)
+                                <input type="checkbox" id="id{{$category->id}}" name="categories_ids[]" value="{{$category->id}}" @if(in_array($category->id, old('categories_ids', $post->categories->pluck('id')->toArray()))) checked="true" @endif >
+                                <label for="id{{$category->id}}">{{$category->title}}</label><br>
+                            @endforeach
+                        </fieldset>  
 
                         <div class="text-right">
                             <button type="submit" class="btn btn-primary">Оновити</button>

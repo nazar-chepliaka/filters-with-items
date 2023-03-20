@@ -9,6 +9,7 @@ use Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostFormRequest;
 use App\Models\Post;
+use App\Models\Category;
 use App\Traits\deleteFile;
 
 class PostsController extends Controller
@@ -34,7 +35,9 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('admin-theme.templates.posts.create');
+        $categories = Category::all();
+
+        return view('admin-theme.templates.posts.create', compact('categories'));
     }
 
     /**
@@ -54,6 +57,10 @@ class PostsController extends Controller
 
         $post = Post::create(array_merge($image, $request->only(Post::getTableColumnsNames())));
 
+        if ($request->filled('categories_ids')) {
+            $post->categories()->sync($request->categories_ids);
+        }
+
         return redirect()->route('admin.posts.index')->with('success', 'Запис успішно збережено');
     }
 
@@ -63,8 +70,9 @@ class PostsController extends Controller
     public function edit(string $id)
     {
         $post = Post::find($id);
+        $categories = Category::all();
 
-        return view('admin-theme.templates.posts.edit', compact('post'));
+        return view('admin-theme.templates.posts.edit', compact('post', 'categories'));
     }
 
     /**
@@ -87,6 +95,12 @@ class PostsController extends Controller
         }
 
         $post->update(array_merge($image, $request->only(array_keys($post->getAttributes()))));
+
+        $post->categories()->sync([]);
+
+        if ($request->filled('categories_ids')) {
+            $post->categories()->sync($request->categories_ids);
+        }
 
         return redirect()->route('admin.posts.edit', $id)->with('success', 'Запис успішно збережено');
     }
