@@ -14,9 +14,21 @@
         <h1>Каталог</h1>
 
         <div class="row">
-            <div data-group="categories_list" data-role="item" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 border_is_width">
-                Налаштування середовища
-            </div>
+            @foreach($categories as $category)
+                <div data-group="categories_list" class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                    <a href="#" data-role="item" class="border_is_width text_center">
+                        
+                        <div data-role="item_image" class="text_center">
+                            @if(!empty($category->image_path))
+                                <img src="{{$category->image_path}}">
+                            @else
+                                <img src="/assets/common/images/folder-information-outline.svg">
+                            @endif
+                        </div>
+                        Налаштування середовища
+                    </a>
+                </div>
+            @endforeach
         </div>
     </div>
 

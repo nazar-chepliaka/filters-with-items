@@ -6,3 +6,25 @@
 	padding: 22px;
 	margin-top: 16px;
 }
+
+[data-group=categories_list] [data-role=item] {
+	padding: 28px;
+	background: #d8d9dc;
+	border-right: 4px solid #a0a0a0;
+	display: block;
+	color: #000000;
+	font-weight: 600;
+}
+
+[data-group=categories_list] [data-role=item]:hover {
+	text-decoration: none;
+}
+
+[data-group=categories_list] [data-role=item_image] {
+	padding: 28px;
+}
+
+[data-group=categories_list] [data-role=item_image] img {
+	width: 100%;
+	max-width: 120px;
+}
