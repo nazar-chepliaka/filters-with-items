@@ -1,1 +1,8 @@
 @import "../../../assets/sass/app";
+
+[data-group=page_content][data-role=wrapper] {
+	background: #efefef;
+    border-right: 5px solid #2a303a;
+	padding: 22px;
+	margin-top: 16px;
+}

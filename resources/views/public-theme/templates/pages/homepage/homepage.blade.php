@@ -8,6 +8,11 @@
 
 @section('body')
 <body>
-   empty
+    @include('public-theme.templates.widgets.pages-header.index')
+
+    <div data-group="page_content" data-role="wrapper" class="content_wrapper">
+        <h1>Каталог</h1>
+    </div>
+
 </body>
 @endsection
