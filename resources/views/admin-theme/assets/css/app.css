@@ -1,6 +1,2 @@
 @tailwind base;
 @tailwind utilities;
-
-.collapse.show {
-	visibility: visible;
-}
