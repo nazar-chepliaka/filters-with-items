@@ -30,7 +30,7 @@
         justify-content: flex-end;
     }
 
-    .columned-if_large_size {
+    .column-if_large_size {
         flex-direction: column;
     }
 }
@@ -52,7 +52,7 @@
         line-height: 28px;
     }
 
-    .columned-try_medium_size {
+    .column-try_medium_size {
         flex-direction: column;
     }
 
@@ -96,7 +96,7 @@
         flex-direction: column-reverse;
     }
 
-    .columned-try_small_size {
+    .column-try_small_size {
         flex-direction: column;
     }
 
@@ -128,7 +128,7 @@
         max-width: 100%;
     }
 
-    .columned-if_tiny_size {
+    .column-if_tiny_size {
         flex-direction: column;
     }
 
@@ -144,7 +144,7 @@
         display: flex;
     }
 
-    .columned-if_tiny_size {
+    .column-if_tiny_size {
         flex-direction: column;
     }
 

@@ -2,8 +2,8 @@
 
 [data-group=posts_list] [data-role=item] {
 	padding: 28px;
-	background: #d8d9dc;
-	border-right: 4px solid #a0a0a0;
+	/* background: #d8d9dc;
+	border-right: 4px solid #a0a0a0; */
 }
 
 [data-group=posts_list] [data-role=item_image] {
@@ -13,4 +13,9 @@
 
 [data-group=posts_list] [data-role=item] a {
 	color: #000;
+}
+
+[data-group=posts_list] [data-role=item] [data-role=title] {
+	font-size: 18px;
+	font-weight: bold;
 }

@@ -1,12 +1,12 @@
 @import "../../../assets/sass/app";
 
 [data-group=categories_list] [data-role=item] {
-	padding: 28px;
-	background: #d8d9dc;
-	border-right: 4px solid #a0a0a0;
-	display: block;
-	color: #000000;
-	margin: 0px 18px;
+	padding: 26px;
+    border: 1px dotted #000000;
+    display: block;
+    color: #000000;
+    margin: 0px 18px;
+    font-size: 17px;
 }
 
 [data-group=categories_list] [data-role=item]:hover {
@@ -14,7 +14,7 @@
 }
 
 [data-group=categories_list] [data-role=item_image] {
-	padding: 28px;
+	padding: 12px;
 }
 
 [data-group=categories_list] [data-role=item_image] img {

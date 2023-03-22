@@ -25,10 +25,16 @@
                             @endif
                         </a>
                     </div>
-                    <div>
-                        <a href="{{route('posts.show',$post->id)}}">
+                    <div class="basis_0 grow">
+                        <a href="{{route('posts.show',$post->id)}}" data-role="title">
                             {{$post->title}}
-                        </a>
+                        </a><br>
+                        <p>{{$post->description}}</p>
+                        <div class="text_right">
+                            <a href="{{route('posts.show',$post->id)}}">
+                                Переглянути >
+                            </a>
+                        </div>
                     </div>
                 </div>
             @endforeach
