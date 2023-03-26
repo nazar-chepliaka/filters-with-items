@@ -1891,8 +1891,14 @@ h1 {
   margin-right: 8px;
 }
 
+[data-group=page_content] .editormd-html-preview ol.linenums li, .editormd-preview-container ol.linenums li {
+  list-style: none;
+}
+
 [data-group=posts_list] [data-role=item] {
-  padding: 28px;
+  padding: 24px;
+  margin-top: 18px;
+  border-bottom: 5px solid #d9dde2;
   /* background: #d8d9dc;
   border-right: 4px solid #a0a0a0; */
 }

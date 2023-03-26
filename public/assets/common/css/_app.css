@@ -1890,3 +1890,7 @@ h1 {
   margin-left: 8px;
   margin-right: 8px;
 }
+
+[data-group=page_content] .editormd-html-preview ol.linenums li, .editormd-preview-container ol.linenums li {
+  list-style: none;
+}
