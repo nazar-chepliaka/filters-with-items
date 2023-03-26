@@ -7,15 +7,13 @@
 @endsection
 
 @section('body')
-<body>
-    @include('public-theme.templates.widgets.pages-header.index')
 
-    <div data-group="page_content" data-role="wrapper" class="content_wrapper">
+    <div data-group="page_content" data-role="wrapper">
         <h1>Каталог</h1>
 
         <div class="row">
             @foreach($categories as $category)
-                <div data-group="categories_list" class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div data-group="categories_list" data-role="item_wrapper" class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
                     <a href="{{route('categories.show',$category->id)}}" data-role="item" class="border_is_width flex column text_center">
                         <div data-role="item_image" class="text_center flex_centered_item">
                             @if(!empty($category->image_path))
@@ -33,5 +31,4 @@
         </div>
     </div>
 
-</body>
 @endsection

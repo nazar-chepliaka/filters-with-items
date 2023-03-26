@@ -20,5 +20,43 @@
         @yield('category-page-head-part')
         @yield('post-page-head-part')
     </head>
-    @yield('body')
+
+    <body>
+        @include('public-theme.templates.widgets.pages-header.index')
+
+        
+        {{-- <div data-group="breadcrumbs" data-role="wrapper" class="content_wrapper flex valign_center">
+            <a href="{{route('homepage')}}">
+                @include('svg.home') 
+            </a> 
+            <span data-role="divider">/</span> 
+            <span>
+                {{$post->title}}
+            </span>
+        </div> --}}
+        
+        @yield('breadcrumbs')
+
+        <div class="content_wrapper">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div data-group="sidebar_content" data-role="wrapper">
+                        Категорії:
+                        <ul>
+                            @foreach($categories as $category)
+                                <li><a href="{{route('categories.show',$category->id)}}">{{$category->title}}</a></li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                    
+                    @yield('body')
+
+                </div>
+            </div>
+        </div>
+       
+
+    </body>
 </html>

@@ -1823,7 +1823,8 @@ html, body {
   }
 }
 [data-group=pages_header][data-role=wrapper] {
-  background: #354d6d;
+  /* background: #354d6d; */
+  background: #354f71;
   border-bottom: 5px solid #23354c;
 }
 
@@ -1847,7 +1848,8 @@ html, body {
 body {
   font-family: "Nunito", sans-serif;
   /* background-color: #3f4550; */
-  background-color: #d6dbe4;
+  /* background-color: #d6dbe4; */
+  background-color: #1d232d;
 }
 
 p, li {
@@ -1864,10 +1866,34 @@ p, li {
 
 [data-group=page_content][data-role=wrapper] {
   background: #fafcff;
-  border-right: 5px solid #a9afb9;
-  border-bottom: 5px solid #a9afb9;
+  border-right: 5px solid #7e828a;
+  border-bottom: 5px solid #7e828a;
   padding: 22px;
   margin-top: 16px;
+  margin-left: 16px;
+}
+
+[data-group=sidebar_content][data-role=wrapper] {
+  background: #fafcff;
+  border-right: 5px solid #7e828a;
+  border-bottom: 5px solid #7e828a;
+  padding: 22px;
+  margin-top: 16px;
+}
+
+[data-group=sidebar_content][data-role=wrapper] ul {
+  margin-left: 0px;
+  padding-left: 18px;
+}
+
+[data-group=sidebar_content][data-role=wrapper] ul li {
+  margin-top: 24px;
+  line-height: 22px;
+}
+
+[data-group=sidebar_content][data-role=wrapper] ul li a {
+  color: #000;
+  font-size: 16px;
 }
 
 h1 {
@@ -1881,18 +1907,23 @@ h1 {
 
 [data-group=breadcrumbs][data-role=wrapper] {
   /* background: #babfcc; */
-  background: #b9beca;
+  /* background: #b9beca; */
   padding: 14px 22px;
   margin-top: 16px;
   line-height: 24px;
-  border: 5px solid #999fa9;
+  /* border: 5px solid #999fa9; */
   border-left: 0px;
   border-top: 0px;
+  color: #e8f0f7;
 }
 
 [data-group=breadcrumbs][data-role=wrapper] svg {
   height: 24px;
   width: auto;
+}
+
+[data-group=breadcrumbs][data-role=wrapper] svg path {
+  fill: #e8f0f7;
 }
 
 [data-group=breadcrumbs][data-role=wrapper] [data-role=divider] {
@@ -1907,7 +1938,6 @@ h1 {
 [data-group=posts_list] [data-role=item] {
   padding: 18px;
   margin-top: 20px;
-  border-left: 12px solid #d9dde2;
   border-bottom: 2px solid #d9dde2;
   /* background: #d8d9dc;
   border-right: 4px solid #a0a0a0; */

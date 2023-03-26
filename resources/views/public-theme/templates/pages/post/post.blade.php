@@ -8,9 +8,6 @@
 @endsection
 
 @section('body')
-<body>
-    @include('public-theme.templates.widgets.pages-header.index')
-
     <div data-group="page_content" data-role="wrapper" class="content_wrapper">
         <h1>{{$post->title}}</h1>
 
@@ -47,5 +44,4 @@
     <script src="{{ asset('editor/lib/marked.min.js') }}"></script>
     <script src="{{ asset('editor/lib/prettify.min.js') }}"></script>
     <script src="{{ asset('editor/lib/sequence-diagram.min.js') }}"></script>
-</body>
 @endsection

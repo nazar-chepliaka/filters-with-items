@@ -7,19 +7,6 @@
 @endsection
 
 @section('body')
-<body>
-    @include('public-theme.templates.widgets.pages-header.index')
-
-
-    <div data-group="breadcrumbs" data-role="wrapper" class="content_wrapper flex valign_center">
-        <a href="{{route('homepage')}}">
-            @include('svg.home') 
-        </a> 
-        <span data-role="divider">/</span> 
-        <span>
-            {{$category->title}}
-        </span>
-    </div>
 
     <div data-group="page_content" data-role="wrapper" class="content_wrapper">
         <h1>Категорія: «{{$category->title}}»</h1>
@@ -51,6 +38,4 @@
             @endforeach
         </div>
     </div>
-
-</body>
 @endsection
