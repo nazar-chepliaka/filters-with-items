@@ -1823,8 +1823,8 @@ html, body {
   }
 }
 [data-group=pages_header][data-role=wrapper] {
-  background: #465e87;
-  border-bottom: 5px solid #2c374a;
+  background: #354d6d;
+  border-bottom: 5px solid #23354c;
 }
 
 [data-group=pages_header] nav ul li {
@@ -1846,7 +1846,8 @@ html, body {
 
 body {
   font-family: "Nunito", sans-serif;
-  background-color: #3f4550;
+  /* background-color: #3f4550; */
+  background-color: #d6dbe4;
 }
 
 p, li {
@@ -1862,8 +1863,8 @@ p, li {
 
 [data-group=page_content][data-role=wrapper] {
   background: #fafcff;
-  border-right: 5px solid #353535;
-  border-bottom: 5px solid #353535;
+  border-right: 5px solid #a9afb9;
+  border-bottom: 5px solid #a9afb9;
   padding: 22px;
   margin-top: 16px;
 }
@@ -1878,12 +1879,14 @@ h1 {
 }
 
 [data-group=breadcrumbs][data-role=wrapper] {
-  background: #cecfd2;
+  /* background: #babfcc; */
+  background: #b9beca;
   padding: 14px 22px;
   margin-top: 16px;
   line-height: 24px;
-  border-right: 5px solid #353535;
-  border-bottom: 5px solid #353535;
+  border: 5px solid #999fa9;
+  border-left: 0px;
+  border-top: 0px;
 }
 
 [data-group=breadcrumbs][data-role=wrapper] svg {
@@ -1901,7 +1904,7 @@ h1 {
 }
 
 [data-group=categories_list] [data-role=item] {
-  border: 4px solid #535965;
+  border: 4px solid #868b94;
   color: #000;
   display: block;
   font-size: 17px;
@@ -1910,6 +1913,7 @@ h1 {
   border-top: 1px solid;
   padding: 26px;
   border-radius: 5px;
+  height: 100%;
 }
 
 [data-group=categories_list] [data-role=item]:hover {
@@ -1918,6 +1922,7 @@ h1 {
 
 [data-group=categories_list] [data-role=item_image] {
   padding: 12px;
+  min-height: 120px;
 }
 
 [data-group=categories_list] [data-role=item_image] img {

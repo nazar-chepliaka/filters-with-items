@@ -6,7 +6,8 @@
 
 body {
 	font-family: 'Nunito', sans-serif;
-	background-color: #3f4550;
+	/* background-color: #3f4550; */
+	background-color: #d6dbe4;
 }
 
 p, li {
@@ -22,8 +23,8 @@ p, li {
 
 [data-group=page_content][data-role=wrapper] {
 	background: #fafcff;
-    border-right: 5px solid #353535;
-    border-bottom: 5px solid #353535;
+    border-right: 5px solid #a9afb9;
+    border-bottom: 5px solid #a9afb9;
 	padding: 22px;
 	margin-top: 16px;
 }
@@ -38,12 +39,14 @@ h1 {
 }
 
 [data-group=breadcrumbs][data-role=wrapper] {
-	background: #cecfd2;
+	/* background: #babfcc; */
+	background: #b9beca;
 	padding: 14px 22px;
 	margin-top: 16px;
 	line-height: 24px;
-	border-right: 5px solid #353535;
-    border-bottom: 5px solid #353535;
+	border: 5px solid #999fa9;
+    border-left: 0px;
+    border-top: 0px;
 }
 [data-group=breadcrumbs][data-role=wrapper] svg {
 	height: 24px;
