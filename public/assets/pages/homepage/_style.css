@@ -1852,10 +1852,18 @@ body {
   background-color: #1d232d;
 }
 
-p, li {
+p, li, td, th {
   font-size: 17px;
-  line-height: 28px;
+  line-height: 25px;
   color: #000;
+}
+
+.content_wrapper .editormd-html-preview table thead tr {
+  background-color: #edf0f3;
+}
+
+.content_wrapper .editormd-html-preview table thead tr th {
+  font-size: 15px;
 }
 
 .content_wrapper {
