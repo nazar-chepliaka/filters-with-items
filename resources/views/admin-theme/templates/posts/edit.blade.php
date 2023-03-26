@@ -8,10 +8,10 @@
                 <div class="card-header stincky">
                     <div class="d-flex justify-content-between">
                         <div>
-                            Редагування посту
+                            Редагування статті
                         </div>
                         <div class="d-flex">
-                            <a href="{{route('admin.posts.index')}}" class="btn btn-block btn-outline-dark" title="Повернутись до списку категорій"><i class="fas fa-undo"></i></a>
+                            <a href="{{route('admin.posts.index')}}" class="btn btn-block btn-outline-dark" title="Повернутись до списку статей"><i class="fas fa-undo"></i></a>
                         </div>
                     </div> 
                 </div>
@@ -23,7 +23,7 @@
 
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text">Зображення посту</span>
+                            <span class="input-group-text">Зображення статті</span>
                           </div>
                           <div class="input-group-append">
                                 @if(!empty($post->image_path))

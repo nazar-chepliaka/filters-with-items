@@ -47,7 +47,7 @@
     ">
         <i class="nav-icon fas fa-images"></i>
         <p>
-          Пости
+          Статті
         </p>
       </a>
     </li>

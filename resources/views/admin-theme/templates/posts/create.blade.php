@@ -8,10 +8,10 @@
                 <div class="card-header stincky">
                     <div class="d-flex justify-content-between">
                         <div>
-                            Створення посту
+                            Створення статті
                         </div>
                         <div class="d-flex">
-                            <a href="{{route('admin.posts.index')}}" class="btn btn-block btn-outline-dark" title="Повернутись до списку постів">
+                            <a href="{{route('admin.posts.index')}}" class="btn btn-block btn-outline-dark" title="Повернутись до списку статей">
                                 <i class="fas fa-undo"></i>
                             </a>
                         </div>
@@ -24,7 +24,7 @@
 
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
-                            <span class="input-group-text">Зображення посту</span>
+                            <span class="input-group-text">Зображення статті</span>
                           </div>
                           <div class="custom-file">
                             <input type="file" name="image" class="custom-file-input" id="inputGroupFile02" value="{{ old('image') }}">

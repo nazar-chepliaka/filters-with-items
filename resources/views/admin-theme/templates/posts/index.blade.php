@@ -8,7 +8,7 @@
                 <div class="card-header stincky">
                     <div class="d-flex justify-content-between">
                         <div>
-                            Пости
+                            Статті
                         </div>
                         <div class="d-flex">
                             <a href="{{route('admin.posts.create')}}" class="btn btn-primary"><i class="fa fa-fw fa-plus"></i>Створити</a>

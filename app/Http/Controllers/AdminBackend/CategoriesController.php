@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Str;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\CategoryFormRequest;
+use App\Http\Requests\AdminBackend\CategoryFormRequest;
 use App\Models\Category;
 use App\Traits\deleteFile;
 
