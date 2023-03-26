@@ -1853,6 +1853,7 @@ body {
 p, li {
   font-size: 17px;
   line-height: 28px;
+  color: #000;
 }
 
 .content_wrapper {
