@@ -21,7 +21,8 @@
 }
 
 [data-group=categories_list] [data-role=item_image] img {
-	width: 100%;
 	max-width: 150px;
     max-height: 90px;
+    height: auto;
+    width: auto;
 }
