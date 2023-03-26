@@ -12,6 +12,9 @@
         <h1>{{$post->title}}</h1>
 
         <div id="editor">
+            @if(!empty($post->image_path))
+                <img src="{{$post->image_path}}" data-role="main_image">
+            @endif
             <textarea style="display:none;" name="text">{!! $post->text !!}</textarea>
         </div>
     </div>

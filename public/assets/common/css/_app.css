@@ -1858,6 +1858,10 @@ p, li, td, th {
   color: #000;
 }
 
+blockquote p {
+  color: #666;
+}
+
 .content_wrapper .editormd-html-preview table thead tr {
   background-color: #edf0f3;
 }

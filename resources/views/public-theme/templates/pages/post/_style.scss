@@ -1,1 +1,20 @@
 @import "../../../assets/sass/app";
+
+[data-group=page_content] img[data-role=main_image] {
+	float: right;
+	max-width: 220px;
+	height: auto;
+	margin-left: 22px;
+	margin-bottom: 22px;
+}
+
+
+/* Tiny */
+@media screen and (max-width: $tiny-size-max-width) {
+	[data-group=page_content] img[data-role=main_image] {
+		display: block;
+		max-width: 100%;
+		clear: both;
+		float: none;
+	}
+}

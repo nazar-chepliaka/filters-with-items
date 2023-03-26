@@ -1858,6 +1858,10 @@ p, li, td, th {
   color: #000;
 }
 
+blockquote p {
+  color: #666;
+}
+
 .content_wrapper .editormd-html-preview table thead tr {
   background-color: #edf0f3;
 }
@@ -1941,4 +1945,22 @@ h1 {
 
 [data-group=page_content] .editormd-html-preview ol.linenums li, .editormd-preview-container ol.linenums li {
   list-style: none;
+}
+
+[data-group=page_content] img[data-role=main_image] {
+  float: right;
+  max-width: 220px;
+  height: auto;
+  margin-left: 22px;
+  margin-bottom: 22px;
+}
+
+/* Tiny */
+@media screen and (max-width: 576px) {
+  [data-group=page_content] img[data-role=main_image] {
+    display: block;
+    max-width: 100%;
+    clear: both;
+    float: none;
+  }
 }
