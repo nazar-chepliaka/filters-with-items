@@ -8,7 +8,7 @@
 
 @section('body')
 
-    <div data-group="page_content" data-role="wrapper" class="content_wrapper">
+    <div data-group="page_content" data-role="wrapper">
         <h1>Категорія: «{{$category->title}}»</h1>
 
         <div data-group="posts_list">

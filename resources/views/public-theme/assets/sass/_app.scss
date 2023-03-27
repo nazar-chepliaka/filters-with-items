@@ -42,6 +42,7 @@ blockquote p {
 	padding: 22px;
 	margin-top: 16px;
 	margin-left: 16px;
+	border-radius: 10px;
 }
 
 [data-group=sidebar_content][data-role=wrapper] {
@@ -50,6 +51,7 @@ blockquote p {
     border-bottom: 5px solid #7e828a;
 	padding: 22px;
 	margin-top: 16px;
+	border-radius: 10px;
 }
 
 [data-group=sidebar_content][data-role=wrapper] ul {
@@ -59,12 +61,13 @@ blockquote p {
 
 [data-group=sidebar_content][data-role=wrapper] ul li {
 	margin-top: 24px;
-	line-height: 22px;
+	line-height: 20px;
 }
 
 [data-group=sidebar_content][data-role=wrapper] ul li a{
 	color: #000;
 	font-size: 16px;
+	text-decoration: none;
 
 }
 

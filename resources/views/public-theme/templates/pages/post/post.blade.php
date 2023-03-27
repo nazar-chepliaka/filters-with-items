@@ -8,7 +8,7 @@
 @endsection
 
 @section('body')
-    <div data-group="page_content" data-role="wrapper" class="content_wrapper">
+    <div data-group="page_content" data-role="wrapper">
         <h1>{{$post->title}}</h1>
 
         <div id="editor">
