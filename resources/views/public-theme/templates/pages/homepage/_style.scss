@@ -11,9 +11,10 @@
     font-size: 17px;
     border-left: 1px solid;
     border-top: 1px solid;
-    padding: 26px;
-    border-radius: 5px;
+    border-radius: 2px;
     height: 100%;
+    text-decoration: none;
+    background: #ecedf1;
 }
 
 [data-group=categories_list] [data-role=item]:hover {
@@ -23,6 +24,11 @@
 [data-group=categories_list] [data-role=item_image] {
     padding: 12px;
     min-height: 120px;
+    background: #ffffff;
+}
+
+[data-group=categories_list] [data-role=title] {
+    padding: 20px;
 }
 
 [data-group=categories_list] [data-role=item_image] img {

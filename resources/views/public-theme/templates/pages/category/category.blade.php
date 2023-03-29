@@ -14,7 +14,18 @@
         <div data-group="posts_list">
             @foreach($category->posts as $post)
                 <div data-role="item" class="border_is_width flex">
-                    {{-- <div data-role="item_image" class="text_center">
+                    <div class="basis_0 grow">
+                        <a href="{{route('posts.show',$post->id)}}" data-role="title">
+                            {{$post->title}}
+                        </a><br>
+                        <p>{{$post->description}}</p>
+                        <div class="">
+                            <a href="{{route('posts.show',$post->id)}}">
+                                Переглянути >
+                            </a>
+                        </div>
+                    </div>
+                    <div data-role="item_image" class="text_center">
                         <a href="{{route('posts.show',$post->id)}}">
                             @if(!empty($post->image_path))
                                 <img src="{{$post->image_path}}">
@@ -22,17 +33,6 @@
                                 <img src="/assets/common/images/folder-information-outline.svg">
                             @endif
                         </a>
-                    </div> --}}
-                    <div class="basis_0 grow">
-                        <a href="{{route('posts.show',$post->id)}}" data-role="title">
-                            {{$post->title}}
-                        </a><br>
-                        <p>{{$post->description}}</p>
-                        <div class="text_right">
-                            <a href="{{route('posts.show',$post->id)}}">
-                                Переглянути >
-                            </a>
-                        </div>
                     </div>
                 </div>
             @endforeach

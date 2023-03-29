@@ -10,8 +10,9 @@
 
 [data-group=posts_list] [data-role=item_image] {
 	min-width: 40px;
-	margin-right: 28px;
+	margin-left: 28px;
 	max-width: 220px;
+	width: 220px;
 }
 
 [data-group=posts_list] [data-role=item_image] img{
